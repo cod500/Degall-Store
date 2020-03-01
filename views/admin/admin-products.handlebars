@@ -1,0 +1,41 @@
+<h2>Products</h2>
+<a href="/admin/product/add" class="btn btn-primary">Add a new product</a>
+<br><br>
+
+{{#if count}}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Image</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each products}}
+        <tr>
+            <td>{{title}}</td>
+            <td>${{fixed price}}</td>
+            <td>{{category}}</td>
+            {{#if image}}
+            <td><img class="product-image" src="/img/products/{{id}}/{{image}}"></td>
+            {{else}}
+            <td><img class="product-image" src="/img/no-image.png"></td>
+            {{/if}}
+            <td><a href="/admin/product/edit/{{id}}">Edit</a></td>
+            <td>
+                <form class="confirm-delete" action="/admin/product/delete/{{id}}?_method=DELETE" method="post">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger">Delete</i></button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<h3 class="text-center">No Products</h3>
+{{/if}}

@@ -1,0 +1,27 @@
+<h2>Pages</h2>
+<a href="/admin/page/add" class="btn btn-primary">Add a new page</a>
+<br><br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each pages}}
+    <tr>
+      <td>{{title}}</td>
+      <td><a href="/admin/page/edit/{{id}}">Edit</a></td>
+      <td>
+        <form class="confirm-delete" action="/admin/page/delete/{{id}}?_method=DELETE" method="post">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-danger">Delete</i></button>
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody> 
+</table>

@@ -1,0 +1,23 @@
+<h2 class="page-title">Edit Page</h2>
+<a href="/admin/pages" class="btn btn-primary">Back to pages</a>
+<br><br>
+
+<form method="POST" action="/admin/page/edit/{{page.id}}?_method=PUT">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="form-group">
+        <label for="">Title</label>
+        <input type="text" class="form-control" name="title" value="{{page.title}}" placeholder="title">
+    </div>
+
+        <div class="form-group">
+        <label for="">Slug</label>
+        <input type="text" class="form-control" name="slug" value="{{page.slug}}" placeholder="slug">
+    </div>
+
+        <div class="form-group">
+        <label for="">Content</label>
+        <textarea type="text" class="form-control" name="content">{{page.content}}</textarea>
+    </div>
+    <input type="hidden" name="id" value="{{page.id}}">
+    <input type="submit" value="Submit" class="btn btn-primary" placeholder="content">
+</form>

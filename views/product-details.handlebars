@@ -1,0 +1,27 @@
+<div class="col-lg-11">
+
+    <div class="card mt-4">
+        <img class="card-img-top img-fluid" src="/img/products/{{product.id}}/{{product.image}}" alt="">
+        <div class="card-body">
+            <h3 class="card-title">{{product.title}}</h3>
+            <h4>${{fixed product.price}}</h4>
+            <p class="card-text">{{product.description}}</p>
+            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+            4.0 stars
+            <br><br>
+            {{#if user}}
+            <a href="/cart/add/{{product.slug}}"><button type="button" class="btn btn-primary">Add to Cart</button></a>
+            {{else}}
+            <p>Must be logged in to purchase items</p>
+            {{/if}}
+        </div>
+    </div>
+    <div class="card card-outline-secondary my-4">
+        <div class="card-header">
+            Product Reviews
+        </div>
+        <div class="card-body">
+
+        </div>
+    </div>
+</div>
