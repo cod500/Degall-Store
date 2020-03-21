@@ -1,8 +1,11 @@
 const express = require("express");
-const User = require("../models/user");
 const { check, validationResult } = require("express-validator");
 const passport = require("passport");
 const router = express.Router();
+const bcrypt = require('bcryptjs');
+
+// User model
+const User = require("../models/user");
 
 //Get register page
 router.get("/users/register", (req, res) => {
@@ -104,7 +107,9 @@ router.post(
 
             await user.save();
             req.flash("success_msg", "You are registered");
-            res.redirect("/");
+            passport.authenticate("local")(req, res, () => {
+              res.redirect("/");
+            });
           }
         } catch (e) {
           res.send(e);

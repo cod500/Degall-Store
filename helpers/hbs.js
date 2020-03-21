@@ -38,5 +38,10 @@ const stripeTotal = array => {
     return process.env.STRIPE_API_PUB
   }
 
-module.exports = { countCheck, fixed, cartTotal, stripeTotal, pubKey};
+  const limitProducts = (arr, limit) => {
+    if (!Array.isArray(arr)) { return []; }
+    return arr.slice(0, limit);
+  };
+
+module.exports = { countCheck, fixed, cartTotal, stripeTotal, pubKey, limitProducts};
 

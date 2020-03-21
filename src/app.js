@@ -24,7 +24,7 @@ const cartRouter = require("./routers/cart");
 const userRouter = require("./routers/users");
 
 // Handlebars helpers
-const { countCheck, fixed, cartTotal, stripeTotal, pubKey} = require("../helpers/hbs");
+const { countCheck, fixed, cartTotal, stripeTotal, pubKey, limitProducts} = require("../helpers/hbs");
 
 //init express
 const app = express();
@@ -40,7 +40,8 @@ app.engine(
       fixed,
       cartTotal,
       stripeTotal,
-      pubKey
+      pubKey,
+      limitProducts
     }
   })
 );
