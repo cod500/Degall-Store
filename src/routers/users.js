@@ -133,7 +133,7 @@ router.post("/users/login", async (req, res, next) => {
   passport.authenticate("local", {
     successRedirect: "/products",
     failureRedirect: "/users/login",
-    failureFlash: true
+    failureFlash: "Invalid username or password"
   })(req, res, next);
 });
 

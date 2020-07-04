@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton|Bitter|Poppins&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/img/carts.png" />
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -19,6 +26,7 @@
     <script src="/js/app.js"></script>
     <title>Store</title>
 </head>
+
 <body>
     {{#if user.admin}}
     {{>_admin-header}}
@@ -26,28 +34,25 @@
     {{>_header}}
     {{/if}}
     <main>
-        <div class="container">
-            <div class="row">
-               <div class="col-lg-3">
-                    <img class="product-image" src="/img/carts.png"></img>
-                    <div class="list-group">
-                        <a href="/products" class="list-group-item">All Products</a>
-                        {{#each categories}}
-                        <a href="/products/{{slug}}" class="list-group-item">{{title}}</a>
-                        {{/each}}
-                    </div>
-                </div>
-                 <div class="col-lg-9">
-                    <div class="container my-3">
-                        {{> _msg}}
-                        {{> _errors}}
-                        {{{body}}}
-                    </div>
-                </div>
+        <div class="container-fluid main-body">
+            <div class="alert alert-info covid-alert align-middle" role="alert">
+                <span class="align-middle">We’ve reopened stores in selected locations.</span> <span
+                    class="align-middle">Shop
+                    with extra safety measures,
+                    Curbside Pickup and more. Learn How.</span>
             </div>
+            {{> _msg}}
+            {{> _errors}}
+            {{{body}}}
         </div>
     </main>
-    <hr>
     {{>_footer}}
+
+    {{!-- <div class="container-fluid shipping-block new-block">
+    <img src="/img/parcel.png" alt="">
+    <p class="align-middle">Free shipping and free returns.</p>
+    <img src="/img/hook.png" alt="">
+</div> --}}
 </body>
+
 </html>

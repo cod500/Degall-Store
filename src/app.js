@@ -24,7 +24,7 @@ const cartRouter = require("./routers/cart");
 const userRouter = require("./routers/users");
 
 // Handlebars helpers
-const { countCheck, fixed, cartTotal, stripeTotal, pubKey, limitProducts} = require("../helpers/hbs");
+const { countCheck, fixed, cartTotal, stripeTotal, pubKey, limitProducts } = require("../helpers/hbs");
 
 //init express
 const app = express();
@@ -77,7 +77,7 @@ app.use(flash());
 const Page = require("./models/pages");
 
 // get all pages
-Page.find({}).exec(function(err, pages) {
+Page.find({}).exec(function (err, pages) {
   if (err) {
     console.log(err);
   } else {
@@ -89,7 +89,7 @@ Page.find({}).exec(function(err, pages) {
 const Category = require("./models/category");
 
 // get all categories
-Category.find({}).exec(function(err, categories) {
+Category.find({}).exec(function (err, categories) {
   if (err) {
     console.log(err);
   } else {
@@ -101,7 +101,7 @@ Category.find({}).exec(function(err, categories) {
 const Product = require("./models/product");
 
 // get all products
-Product.find({}).exec(function(err, products) {
+Product.find({}).exec(function (err, products) {
   if (err) {
     console.log(err);
   } else {
@@ -115,9 +115,9 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //Global variables
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.locals.success_msg = req.flash("success_msg");
-  res.locals.error_msg = req.flash("error_msg");
+  res.locals.error_msg = req.flash("error");
   res.locals.error = req.flash("error");
   res.locals.user = req.user || null;
   res.locals.cart = req.session.cart;
@@ -133,11 +133,11 @@ app.use(cartRouter);
 app.use(productRouter);
 app.use(pagesRouter);
 
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.redirect("/");
 });
 
 //Start server
 app.listen(port, () => {
-  console.log(`Server is up on ${port}`);
+  console.log(`Listening on port ${port}`);
 });

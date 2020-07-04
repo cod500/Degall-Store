@@ -21,24 +21,24 @@ router.get("/cart/add/:product", ensureAuth, async (req, res) => {
       });
     } else {
       let cart = req.session.cart;
-      let newItem = true;
+      // let newItem = true;
 
-      for (let i = 0; i < cart.length; i++) {
-        if (cart[i].title === slug) {
-          cart[i].qty++;
-          newItem = false;
-          break;
-        }
-      }
+      // for (let i = 0; i < cart.length; i++) {
+      //   if (cart[i].title === slug) {
+      //     cart[i].qty++;
+      //     newItem = false;
+      //     break;
+      //   }
+      // }
 
-      if (newItem) {
-        cart.push({
-          title: slug,
-          qty: 1,
-          price: parseFloat(product.price).toFixed(2),
-          image: `/img/products/${product._id}/${product.image}`
-        });
-      }
+
+      cart.push({
+        title: slug,
+        qty: 1,
+        price: parseFloat(product.price).toFixed(2),
+        image: `/img/products/${product._id}/${product.image}`
+      });
+
     }
     req.flash("success_msg", "Product added to cart!");
     res.redirect("back");
@@ -100,7 +100,7 @@ router.get("/cart/success", (req, res) => {
 });
 
 //Process payment through stripe
-router.post("/cart/pay", ensureAuth, async function(req, res) {
+router.post("/cart/pay", ensureAuth, async function (req, res) {
   const charge = await stripe.charges.create({
     amount: 999,
     currency: "usd",

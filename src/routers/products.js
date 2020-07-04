@@ -19,7 +19,8 @@ router.get("/products/:category", async (req, res) => {
   try {
     const products = await Product.find({ category: req.params.category });
     res.render("category-products", {
-      products
+      products,
+      category: req.params.category
     });
   } catch (e) {
     res.status(500).send(e);

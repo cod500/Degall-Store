@@ -1,27 +1,51 @@
-<div class="col-lg-11">
-
-    <div class="card mt-4">
-        <img class="card-img-top img-fluid" src="/img/products/{{product.id}}/{{product.image}}" alt="">
-        <div class="card-body">
-            <h3 class="card-title">{{product.title}}</h3>
-            <h4>${{fixed product.price}}</h4>
-            <p class="card-text">{{product.description}}</p>
-            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-6 product-view">
+            <img class="img-fluid" src="/img/products/{{product.id}}/{{product.image}}" alt="">
+        </div>
+        <div class="col-6 product-details">
+            <h3 class="">{{product.title}}</h3>
+            <p class="">{{product.description}}</p>
+            <h4>${{fixed product.price}} 30% off</h4>
+            <span class="text-dark">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
             4.0 stars
             <br><br>
+
+            <div class="shipping-info">
+                <p>Free Shipping</p>
+                <p>Select a size to see when it will arrive.</p>
+                <p>With safety in mind, we're offering free Curbside Pickup instead of in-store pickup.</p>
+                <p>Due to the impact of COVID-19 and increased order volumes, orders may be delayed.</p>
+                <hr>
+                <p>Buy &amp Pick Up</p>
+                <p>Select a size to see pickup availability.</p>
+            </div>
+
             {{#if user}}
-            <a href="/cart/add/{{product.slug}}"><button type="button" class="btn btn-primary">Add to Cart</button></a>
+            <a href="/cart/add/{{product.slug}}"><button type="button" class="btn btn-dark"><i
+                        class="fa fa-shopping-bag" aria-hidden="true"></i> &nbsp;Add to Bag</button></a>
             {{else}}
             <p>Must be logged in to purchase items</p>
             {{/if}}
         </div>
     </div>
-    <div class="card card-outline-secondary my-4">
-        <div class="card-header">
-            Product Reviews
-        </div>
-        <div class="card-body">
+</div>
+<hr>
 
+<div class="container home-product-list">
+    <h2>Great deals on popular items</h2>
+    <div class="row">
+        {{#each (limitProducts products 8)}}
+        <div class="col-6 col-sm-3 col-m-3 align-text-bottom">
+            <a href="/products/{{category}}/{{slug}}"><img class="align-text-bottom"
+                    src="/img/products/{{id}}/{{image}}" alt=""></a>
+            <h4 class="">
+                <a href="/products/{{category}}/{{slug}}">{{title}}</a>
+            </h4>
+            <h5>${{fixed price}}</h5>
+            <small class="text-dark">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
         </div>
+        {{/each}}
     </div>
+
 </div>

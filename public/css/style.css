@@ -1,13 +1,333 @@
-*{
-    font-family: 'Poppins', sans-serif;
+/* Global styles */
+
+* {
+    font-size: 70%;
 }
 
-.product-image{
-    height: 100px;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato';
+    position: relative;
+    min-height: calc(100vh);
+}
+
+.main-body {
+    min-height: calc(100vh - 177px - 100px);
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, a, p {
+    font-family: 'Lato';
+}
+
+.banner-letter h5, p {
+    color: #000;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.banner-letter p {
+    font-size: 20px;
+}
+
+.carousel-inner img {
+    max-height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* End of global styles */
+
+/* navbar */
+
+.navbar {
+    height: 50px;
+}
+
+.navbar a {
+    color: #000;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.navbar a:hover {
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+
+.push-right {
+    margin: auto;
+}
+
+/* end of navbar */
+
+/* alert */
+
+.covid-alert {
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.covid-alert span {
+    font-size: 15px;
+}
+
+.covid-alert span:first-of-type {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* end of alert */
+
+/* home page */
+
+.container-fluid .sale-block {
+    background-color: #da291b;
+}
+
+.container-fluid .sale-block h1 {
+    letter-spacing: 3px;
+}
+
+.container-fluid .sale-block h3 {
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.container-fluid .sale-block p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.container-fluid .sale-block span {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.new-block {
+    text-align: center;
+    background-color: #009173;
+    color: #fff;
+    padding: 35px;
+    margin-top: 25px;
+}
+
+.new-block h1 {
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.new-block p {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.new-links h4, ul {
+    display: inline;
+}
+
+.new-links h4 {
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.new-links ul {
+    padding-left: 10px;
+}
+
+.new-links ul a {
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 5px;
+    color: #fff;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #fff;
+}
+
+.new-links ul a:hover {
+    border-bottom: 1.5px solid #fff;
+}
+
+/* dual photo banner */
+
+.twin-banner {
+    display: flex;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.twin-banner img {
+    width: 100%;
+}
+
+.twin-banner .banner-img {
+    margin: 5px;
+    text-align: center;
+}
+
+.twin-banner .banner-img p {
+    margin-bottom: 0;
+    font-size: 15px;
+}
+
+.twin-banner .banner-img p:first-of-type {
+    font-weight: 700;
+}
+
+.twin-banner .banner-img p:last-of-type {
+    margin-bottom: 5px;
+}
+
+.twin-banner .banner-img a {
+    color: #000;
+    border-bottom: 1px solid #000;
+    font-weight: 300;
+}
+
+.twin-banner .banner-img a:hover {
+    border-bottom: 1.5px solid #000;
+}
+
+/* end of dual photo banner */
+
+/* product list on homepage */
+
+.home-product-list {
+    margin-top: 50px;
+    vertical-align: bottom;
+}
+
+.home-product-list h2 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+}
+
+.home-product-list img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.home-product-list h4 a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 300;
+}
+
+/* end of product list on homepage */
+
+/* product styles */
+
+.product-image {
     width: 100px;
+    object-fit: cover;
 }
 
-.product-listing{
+.product-listing {
     height: 200px;
     width: 200px;
 }
+
+.product-listing h4 span {
+    font-size: 29px;
+}
+
+.product-details p {
+    font-weight: 800;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.product-details p:last-of-type {
+    font-weight: 400;
+}
+
+/* end of product styles */
+
+/* register form styles */
+
+.register-form p {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.register-form a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+}
+
+.register-form a:hover {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1.5px solid #000;
+}
+
+.register-form btn {
+    background-color: #000;
+}
+
+/* end of register form styles */
+
+/* success page */
+
+.success-page p {
+    font-size: 15px;
+}
+
+.success-page a {
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+
+.success-page a:hover {
+    text-decoration: none;
+    border-bottom: 1.5px solid #000;
+}
+
+/* end of success page */
+
+/* Shipping block */
+
+.shipping-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    background-color: #f6f6f6;
+}
+
+.shipping-block p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #000;
+    letter-spacing: 1px;
+}
+
+.shipping-block img {
+    width: 100px;
+    margin: auto;
+}
+
+/* end of shipping block */
+
+/* footer styles */
+
+.footer {
+    background-color: #f6f6f6;
+    margin-top: 100px;
+    padding: 50px;
+}
+
+.footer .fa {
+    font-size: 25px;
+}
+
+/* end of footer styles */
