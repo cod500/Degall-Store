@@ -1,7 +1,7 @@
 /* Global styles */
 
 * {
-    font-size: 70%;
+    font-size: 80%;
 }
 
 html {
@@ -41,6 +41,12 @@ body {
 }
 
 /* End of global styles */
+
+/* flash message */
+
+.msg-div p {
+    font-size: 15px;
+}
 
 /* navbar */
 
@@ -279,6 +285,31 @@ body {
 }
 
 /* end of register form styles */
+
+/* chekout page styles */
+
+.checkout-form h6 {
+    font-size: 15px;
+}
+
+.checkout-form a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #000;
+    border-bottom: 1px solid #000;
+}
+
+.checkout-form .clear-btn {
+    border-bottom: none;
+}
+
+.checkout-form a:hover {
+    font-size: 12px;
+    color: #000;
+    border-bottom: 2px solid #000;
+}
+
+/* end of check out page styles */
 
 /* success page */
 

@@ -33,13 +33,13 @@ router.post(
     check("password")
       .not()
       .isEmpty()
-      .withMessage("Must have passowrd")
+      .withMessage("Must have password")
       .isLength({ min: 8 })
       .withMessage("Password must be more than 8 characters"),
     check("confirm")
       .not()
       .isEmpty()
-      .withMessage("Must confirm passowrd")
+      .withMessage("Must confirm password")
   ],
   async (req, res) => {
     const errors = validationResult(req).array();

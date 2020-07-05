@@ -12,17 +12,15 @@
             </h4>
 
             {{#each cart}}
-            <ul class="list-group mb-3">
+            <ul class="list-group mb-3 checkout-form">
                 <li class="list-group-item d-flex justify-content-between lh-condensed">
                     <div>
                         <h6 class="my-0">{{title}}</h6>
                         <small class="text-muted">Description</small>
                     </div>
-                    <span><a href="/cart/checkout/update/{{title}}?action=add"><i class="fa fa-plus text-dark"
-                                aria-hidden="true"></i>
+                    <span><a href="/cart/checkout/update/{{title}}?action=add">Add
                         </a></span>
-                    <span><a href="/cart/checkout/update/{{title}}?action=subtract"><i class="fa fa-minus text-dark"
-                                aria-hidden="true"></i>
+                    <span><a href="/cart/checkout/update/{{title}}?action=subtract">Remove
                         </a></span>
                     <span><a href="/cart/checkout/update/{{title}}?action=clear" class="text-dark">clear</a></span>
                     <span class="text-muted">{{price}}</span>
@@ -33,7 +31,8 @@
                     <strong>{{cartTotal cart}}</strong>
                 </li>
                 <br>
-                <a href="/cart/checkout/clear"><button class="btn btn-danger m-1 p-2">Clear Bag</button></a>
+                <a href="/cart/checkout/clear" class="clear-btn"><button class="btn btn-danger m-1 p-2">Clear
+                        Bag</button></a>
             </ul>
 
             <form class="card p-2">
