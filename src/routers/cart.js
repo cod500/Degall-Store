@@ -23,16 +23,6 @@ router.get("/cart/add/:product", ensureAuth, async (req, res) => {
       });
     } else {
       let cart = req.session.cart;
-      // let newItem = true;
-
-      // for (let i = 0; i < cart.length; i++) {
-      //   if (cart[i].title === slug) {
-      //     cart[i].qty++;
-      //     newItem = false;
-      //     break;
-      //   }
-      // }
-
 
       cart.push({
         title: slug,

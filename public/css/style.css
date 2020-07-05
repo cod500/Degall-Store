@@ -241,6 +241,12 @@ body {
 
 /* product styles */
 
+.product-image {
+    width: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
 .product-listing {
     height: 200px;
     width: 200px;
