@@ -1,38 +1,36 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-light pb-5">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
     <a class="navbar-brand" href="/">DeGallShop</a>
     <a href="/products" class="navbar-brand">All Products</a>
     {{#each categories}}
     <a href="/products/{{slug}}" class="navbar-brand">{{title}}</a>
     {{/each}}
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
 
-      {{!-- {{#each pages}}
+    {{!-- {{#each pages}}
 
       <a class="navbar-brand" href="{{slug}}">{{title}}</a>
 
       {{/each}} --}}
-      {{#if user}}
+    {{#if user}}
 
-      <a class="navbar-brand push-right" href="/cart/checkout"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Bag
-        {{#if cart}}<span class="badge badge-danger">{{cart.length}}{{else}}{{/if}} </span></a>
-
-
-      <a class="navbar-brand" href="/users/logout">Sign Out</a>
-
-      {{else}}
-
-      <a class="navbar-brand push-right" href="/users/register">Register</a>
+    <a class="navbar-brand push-right" href="/cart/checkout"><i class="fa fa-shopping-bag" aria-hidden="true"></i> Bag
+      {{#if cart}}<span class="badge badge-danger">{{cart.length}}{{else}}{{/if}} </span></a>
 
 
-      <a class="navbar-brand" href="/users/login">Sign In</a>
+    <a class="navbar-brand" href="/users/logout">Sign Out</a>
 
-      {{/if}}
-    </div>
+    {{else}}
+
+    <a class="navbar-brand push-right" href="/users/register">Register</a>
+
+
+    <a class="navbar-brand" href="/users/login">Sign In</a>
+
+    {{/if}}
   </div>
 </nav>

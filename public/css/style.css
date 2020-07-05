@@ -4,9 +4,13 @@
     font-size: 70%;
 }
 
+html {
+    scroll-padding-top: 70px;
+}
+
 body {
     margin: 0;
-    padding: 0;
+    scroll-padding-top: 70px;
     font-family: 'Lato';
     position: relative;
     min-height: calc(100vh);
@@ -42,6 +46,7 @@ body {
 
 .navbar {
     height: 50px;
+    position: relative;
 }
 
 .navbar a {
