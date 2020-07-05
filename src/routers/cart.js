@@ -10,11 +10,13 @@ router.get("/cart/add/:product", ensureAuth, async (req, res) => {
     let slug = req.params.product;
     const product = await Product.findOne({ slug: slug });
 
+
     if (req.session.cart === undefined) {
       req.session.cart = [];
       req.session.num = 1;
       req.session.cart.push({
         title: slug,
+        checkout: slug.replace(/-/g, " "),
         qty: 1,
         price: parseFloat(product.price).toFixed(2),
         image: `/img/products/${product._id}/${product.image}`
@@ -34,6 +36,7 @@ router.get("/cart/add/:product", ensureAuth, async (req, res) => {
 
       cart.push({
         title: slug,
+        checkout: slug.replace(/-/g, " "),
         qty: 1,
         price: parseFloat(product.price).toFixed(2),
         image: `/img/products/${product._id}/${product.image}`
