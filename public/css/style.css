@@ -1,7 +1,7 @@
 /* Global styles */
 
 * {
-    font-size: 80%;
+    font-size: 70%;
 }
 
 html {
@@ -44,8 +44,12 @@ body {
 
 /* flash message */
 
+.msg-div {
+    text-align: center;
+}
+
 .msg-div p {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 /* navbar */
@@ -53,6 +57,8 @@ body {
 .navbar {
     height: 50px;
     position: relative;
+    z-index: 99;
+    margin-bottom: 40px;
 }
 
 .navbar a {
