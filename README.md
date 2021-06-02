@@ -2,7 +2,7 @@
 
 #### Full-Stack Web App online mock store connected to MongoDB database
 
-Node/Express(back-end) connected to MongoDB database. Uses Handlebars templating and some Bootstrap on the front end.
+Node/Express(back-end) connected to MongoDB database. Uses Handlebars templating and some Bootstrap on the front end for responsiveness.
 
 ## Porpose
 
@@ -28,6 +28,8 @@ Project is completed and live but issues are addresed when they arise.
 - I went into the project with little knowledge of payment systems and was able to implement Stripe instead of Paypal which was an overkill for a mock project. I found Stripe was more developer friendly.  
 
 - Creating iamges tied to each product and categories was a challenge. I found a StackOverflow solution where multer is used to upload the images and move-file is used to move the images to product folders.
+
+- Although I used Bootstrap to make it mobile responsive, I designed the store from pure CSS which was difficut since designing is not my strength.
 
 -Several technologies I learn and practiced with:
    - Node.js
