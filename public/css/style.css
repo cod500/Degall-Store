@@ -28,6 +28,10 @@ p {
     font-size: 12px;
 }
 
+label {
+    font-size: 12px;
+}
+
 .banner-letter h5, p {
     color: #000;
     font-weight: 300;
