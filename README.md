@@ -19,7 +19,7 @@ Create an account to see checkout features.
 Project is completed and live but issues are addresed when they arise. 
 
 ## Project Screen Shots
-![alt tag](https://cdn-images.imagevenue.com/f6/73/3b/ME13FQZ0_o.png)
+![alt tag](https://cdn-images.imagevenue.com/14/16/55/ME13G0NZ_o.jpg)
 
 ## Reflection
 
