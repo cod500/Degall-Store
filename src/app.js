@@ -28,7 +28,7 @@ const { countCheck, fixed, cartTotal, stripeTotal, pubKey, limitProducts } = req
 
 //init express
 const app = express();
-const port = process.env.PORT
+const port = process.env.PORT || 3000
 
 //Handlbars middleware
 app.engine(
